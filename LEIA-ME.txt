@@ -1,0 +1,16 @@
+COMO GERAR O APK (sem instalar nada no PC)
+
+1) Crie uma conta gratis em github.com e um repositorio novo (pode ser privado).
+2) Envie TODO o conteudo desta pasta (inclusive a pasta oculta .github) para o repositorio.
+3) Aba "Actions" > "Gerar APK" > "Run workflow". Leva uns 5 minutos.
+4) Abra a execucao concluida e baixe "coletor-coordenadas-apk" (Artifacts). Dentro esta o app-debug.apk.
+5) Passe o APK para o celular e instale (permita "instalar apps desconhecidos").
+
+SERVIDOR: em www/index.html, procure DOMINIO_SERVIDOR e confira o endereco.
+Para atualizar: edite www/index.html, envie de novo e rode o workflow outra vez.
+
+OPCAO ANDROID STUDIO: npm install && npx cap add android && npx cap sync && npx cap open android
+(adicione as permissoes de GPS e camera no AndroidManifest.xml).
+
+OFFLINE: o workflow baixa Tailwind, XLSX, JSZip e icones e os embute no APK.
+Precisa de sinal so para o login e para puxar a tarefa; depois o app trabalha sem rede.
